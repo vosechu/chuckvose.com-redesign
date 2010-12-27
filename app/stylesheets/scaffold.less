@@ -1,0 +1,96 @@
+@body: #746629;
+@header: #7F2A00;
+@text_bg: @body + #999;
+@text: @header - #222;
+
+.glow (@distance: 3px, @glow: #888) {
+  -moz-box-shadow: 0 0 @distance @distance @glow;
+  -webkit-box-shadow: 0 0 @distance @distance @glow;
+  box-shadow: 0 0 @distance @distance @glow;
+}
+.rounded_corners (@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   90%;
+  line-height: 18px;
+  color: @text;
+}
+
+body {
+  background-color: @body;
+  
+  #container {
+    width: 860px;
+    background-color: @text_bg;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    .glow(3px, (@text_bg - #666));
+    .rounded_corners();
+    
+    #content h1 { 
+      font-family: 'Cardo', arial, serif; 
+      font-size: 44px;
+      line-height: 48px;
+      border-bottom: 3px solid @header;
+      letter-spacing: .035em;
+      margin-top: 15px;
+      color: @header;
+      text-shadow: white 0 1px 0;
+    }
+  }
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: @text; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

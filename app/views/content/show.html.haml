@@ -1,0 +1,5 @@
+%article
+  %header
+    %h1= @content.title
+  %section
+    =raw RedCloth.new(@content.description).to_html

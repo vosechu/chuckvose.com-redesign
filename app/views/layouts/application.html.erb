@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChuckvoseRedesign2011Rails</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <section id="container">
+    <header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </header>
+    <section id="content">
+      <%= yield %>
+    <section>
+  </section>
+</body>
+</html>
